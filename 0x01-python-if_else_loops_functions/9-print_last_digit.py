@@ -6,5 +6,6 @@ def print_last_digit(number):
         number = -number
     last_digit = number % 10
     if not signed:
-        last_digit = last_digit * -1
+        last_digit = last_digit
+    print(last_digit, end="")
     return last_digit
