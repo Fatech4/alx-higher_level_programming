@@ -28,4 +28,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
         num_tb1 = tuple_b[0]
         num_tb2 = tuple_b[1]
 
-    return (num_ta1 + num_tb1, num_ta2 + num_tb2) 
+    return (num_ta1 + num_tb1, num_ta2 + num_tb2)
