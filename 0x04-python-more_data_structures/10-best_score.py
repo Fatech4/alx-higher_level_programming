@@ -6,3 +6,5 @@ def best_score(a_dictionary):
         for i in sorted(a_dictionary):
             key.append(i)
         return key[-1]
+    else:
+        return None
