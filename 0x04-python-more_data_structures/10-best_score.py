@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-
 def best_score(a_dictionary):
-    key = []
     if a_dictionary is not None:
-        for i in sorted(a_dictionary):
-            key.append(i)
-        return key[-1]
-    else:
-        return None
+        students_number = len(a_dictionary.values())
+        if students_number > 0:
+            score = max(a_dictionary.values())
+            for key in a_dictionary.keys():
+                if a_dictionary[key] == score:
+                    return key
+    return None
