@@ -18,7 +18,6 @@ Trying to print the area
     >>> bg.integer_validator("Ade", 8)
 
 Trying to pass a non-integer argument
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("name", "5")
     Traceback (most recent call last):
     	      ...
@@ -26,7 +25,6 @@ Trying to pass a non-integer argument
 
 
 Trying to pass a boolean value
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("name", True)
     Traceback (most recent call last):
     	      ...
@@ -34,7 +32,6 @@ Trying to pass a boolean value
 
 
 Trying to pass a negative value
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("name", -5)
     Traceback (most recent call last):
     	      ...
@@ -42,7 +39,6 @@ Trying to pass a negative value
 
 
 Trying to pass a zero value
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("name", 0)
     Traceback (most recent call last):
     	      ...
@@ -50,18 +46,15 @@ Trying to pass a zero value
 
 
 Passing a positive value
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("name", 5)
 
 Integer_validator with no arguments
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator()
     Traceback (most recent call last):
     	      ...
     TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 Passing tuple to method
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("age", (4,))
     Traceback (most recent call last):
     	      ...
@@ -69,7 +62,6 @@ Passing tuple to method
 
 
 Passing list to method
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("age", [3])
     Traceback (most recent call last):
     	      ...
@@ -77,7 +69,6 @@ Passing list to method
 
 
 Passing dict to method
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("age", {3, 4})
     Traceback (most recent call last):
               ...
@@ -85,7 +76,6 @@ Passing dict to method
 
 
 Passing None to method
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("age", None)
     Traceback (most recent call last):
               ...
