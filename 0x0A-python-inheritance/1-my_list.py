@@ -10,5 +10,6 @@ class MyList(list):
 
     def print_sorted(self):
         """ New instance method of the subclass object """
-
-        print(sorted(self))
+        dlist = self.copy()
+        dlist.sort()
+        print(dlist)
