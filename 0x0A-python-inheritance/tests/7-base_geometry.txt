@@ -15,6 +15,7 @@ Trying to print the area
     	      ...
     Exception: area() is not implemented
 
+    >>> bg.integer_validator("Ade", 8)
 
 Trying to pass a non-integer argument
     >>> bg = BaseGeometry()
