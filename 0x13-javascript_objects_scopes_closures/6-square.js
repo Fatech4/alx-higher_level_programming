@@ -2,11 +2,11 @@
 const ParentSquare = require('./5-square.js');
 
 class Square extends ParentSquare {
-  constructor(size) {
+  /** constructor (size) {
     super(size);
   }
-
-  charPrint(c) {
+**/
+  charPrint (c) {
     if (c === undefined) {
       c = 'X';
     }
