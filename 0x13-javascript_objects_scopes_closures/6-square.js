@@ -1,34 +1,19 @@
 #!/usr/bin/node
-const Rectangle = require('./4-rectangle.js');
+const ParentSquare = require('./5-square.js');
 
-module.exports = class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
+class Square extends ParentSquare {
+  constructor(size) {
+    super(size);
   }
 
-  print () {
-    super.print();
-  }
-
-  double () {
-    super.double();
-  }
-
-  rotate () {
-    super.rotate();
-  }
-
-  charPrint (c) {
+  charPrint(c) {
     if (c === undefined) {
-      super.print();
-    } else {
-      const wide = [];
-      for (let i = 1; i <= this.width; i++) {
-        wide.push('C');
-      }
-      for (let j = 1; j <= this.height; j++) {
-        console.log(wide.join(''));
-      }
+      c = 'X';
+    }
+    for (let i = 0; i < this.height; i++) {
+      console.log(c.repeat(this.width));
     }
   }
-};
+}
+
+module.exports = Square;
