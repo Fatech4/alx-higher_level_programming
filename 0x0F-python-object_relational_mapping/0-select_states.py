@@ -3,7 +3,7 @@
 hbtn_0e_0_usa database"""
 if __name__ == '__main__':
     import MySQLdb
-
+    try:
     db = MySQLdb.connect(
         host='localhost', user='root', passwd='', db='hbtn_0e_0_usa'
         )
@@ -11,3 +11,6 @@ if __name__ == '__main__':
     cur.execute('SELECT * FROM states ORDER BY id ASC')
     for elements in cur.fetchall():
         print(elements)
+    except:
+        pass
+    db.close()
