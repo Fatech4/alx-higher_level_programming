@@ -14,10 +14,12 @@ if __name__ == '__main__':
             pass
         try:
             cur = db.cursor()
-            cur.execute("SELECT * FROM states WHERE name LIKE BINARY %s \
-                 ORDER BY states.id ASC", (sys.argv[4],))
+            cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'\
+            ORDER BY states.id ASC".format(sys.argv[4]))
             entries = cur.fetchall()
             for item in entries:
                 print(item)
         except MySQLdb.Error:
             pass
+        cur.close()
+        db.close()
