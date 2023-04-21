@@ -15,7 +15,7 @@ if __name__ == '__main__':
             pass
         try:
             cur = con.cursor()
-            cur.execute("SELECT * FROM states WHERE NAME LIKE 'N%'\
+            cur.execute("SELECT * FROM states WHERE BINARY name LIKE 'N%'\
                         ORDER BY states.id ASC"
                         )
             entries = cur.fetchall()
