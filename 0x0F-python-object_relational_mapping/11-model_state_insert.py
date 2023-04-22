@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" A script that prints the first State object from the database
-hbtn_0e_6_usa """
+""" A script that adds the State object “Louisiana” to the database
+hbtn_0e_6_usa"""
 import sys
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
@@ -16,3 +16,4 @@ if __name__ == "__main__":
     new_state = State(name='Louisiana')
     session.add(new_state)
     session.commit()
+    print(new_state.id)
