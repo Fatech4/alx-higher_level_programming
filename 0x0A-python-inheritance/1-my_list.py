@@ -1,15 +1,9 @@
 #!/usr/bin/python3
-
-""" A module that has a class and a subclass """
+"""Inherit list class to new class with sorted print method"""
 
 
 class MyList(list):
-    """ A class that inherit from list object and define a new instance method
-    """
-    
-
+    """This class inherits from list and ammends with sorted print method"""
     def print_sorted(self):
-        """ New instance method of the subclass object """
-        dlist = self.copy()
-        dlist.sort()
-        print(dlist)
+        """Print list sorted in ascending order"""
+        print(sorted(self))
