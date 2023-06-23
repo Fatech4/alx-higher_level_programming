@@ -1,0 +1,47 @@
+=======================================
+Tests for say_my_name 3-say_my_name.py
+=======================================
+
+This is a set of test cases for the module say_my_name - a function
+which prints the first and, optionally, last name passed in by the user.
+
+:: Import module
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Tests
+=====
+
+say_my_name will raise an error if passed a non-string argument. If the module
+is passed only one argument, the second will default to an empty string.
+
+:: Typical behavior
+
+	>>> say_my_name('Justin', 'Majetich')
+	My name is Justin Majetich
+
+:: Non-string arguments
+
+	>>> say_my_name('Spartan', 117)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> say_my_name(2, 'Chainz')
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+:: One mandatory argument
+
+	>>> say_my_name('Yonce')
+	My name is Yonce 
+
+:: Empty arguments
+
+	>>> say_my_name('')
+	My name is  
+
+:: Missing arguments
+
+	>>> say_my_name()
+	Traceback (most recent call last):
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
