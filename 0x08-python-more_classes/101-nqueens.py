@@ -5,7 +5,9 @@
 
 if __name__ is "__main__":
     import sys
-def main()
+
+
+def main():
     """ """
     args = sys.argv
     if len(args) is not 2:
@@ -28,20 +30,21 @@ def main()
         for col in range(n):
             placed = 0
             while placed < n:
-            
                 if check_placement(board, [row, col]) is True:
                     # place queen
                     placed += 1
 
-            print_board # print board
+            print_board  # print board
     return 0
 
-def check_placement(board, pos)
+
+def check_placement(board, pos):
     """Determine if the queen can safely assume position"""
 
     # check column
 
     # check diagnols
 
-def print_board()
+
+def print_board():
     """Prints board with queens safely positioned"""
