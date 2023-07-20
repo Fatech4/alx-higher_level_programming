@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-"""A module that sent a request and print the value of a
-    header attribute"""
-if __name__ == '__main__':
-    import urllib.request
-    import sys
-    url = sys.argv[1]
+"""Request and parse header
+"""
 
-    with urllib.request.urlopen(url) as response:
-        header = response.info()
-        x_request_id = header['X-Request-Id']
+import urllib.request
+from sys import argv
 
-    print(x_request_id)
+if __name__ == "__main__":
+    with urllib.request.urlopen(argv[1]) as response:
+        for header in response.getheaders():
+            if header[0] == 'X-Request-Id':
+                print(header[1])
